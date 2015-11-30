@@ -49,3 +49,9 @@ CAS will be available at:
 
 ## External
 Deploy resultant `target/cas.war` to a Servlet container of choice.
+
+
+
+
+### 教程
+见教程：http://www.kafeitu.me/sso/2010/11/05/sso-cas-full-course.html
