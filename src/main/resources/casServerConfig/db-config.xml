@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c" xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:p="http://www.springframework.org/schema/p"
-    xmlns:util="http://www.springframework.org/schema/util" xmlns:context="http://www.springframework.org/schema/context"
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:context="http://www.springframework.org/schema/context"
     xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
- 
-  
-    <bean id="dataSourceForLocal"
-  class="com.mchange.v2.c3p0.ComboPooledDataSource"
-  p:driverClass="${database.driverClass}"
-  p:jdbcUrl="${database.url}"
-  p:user="${database.user}"
-  p:password="${database.password}"
-  p:initialPoolSize="${database.pool.minSize}"
-  p:minPoolSize="${database.pool.minSize}"
-  p:maxPoolSize="${database.pool.maxSize}"
-  p:maxIdleTimeExcessConnections="${database.pool.maxIdleTime}"
-  p:checkoutTimeout="${database.pool.maxWait}"
-  p:acquireIncrement="${database.pool.acquireIncrement}"
-  p:acquireRetryAttempts="${database.pool.acquireRetryAttempts}"
-  p:acquireRetryDelay="${database.pool.acquireRetryDelay}"
-  p:idleConnectionTestPeriod="${database.pool.idleConnectionTestPeriod}"
-  p:preferredTestQuery="${database.pool.connectionHealthQuery}" />
-    
+
+
+    <bean
+        id="dataSourceForLocal"
+        class="com.mchange.v2.c3p0.ComboPooledDataSource"
+        p:driverClass="${database.driverClass}"
+        p:jdbcUrl="${database.url}"
+        p:user="${database.user}"
+        p:password="${database.password}"
+        p:initialPoolSize="${database.pool.minSize}"
+        p:minPoolSize="${database.pool.minSize}"
+        p:maxPoolSize="${database.pool.maxSize}"
+        p:maxIdleTimeExcessConnections="${database.pool.maxIdleTime}"
+        p:checkoutTimeout="${database.pool.maxWait}"
+        p:acquireIncrement="${database.pool.acquireIncrement}"
+        p:acquireRetryAttempts="${database.pool.acquireRetryAttempts}"
+        p:acquireRetryDelay="${database.pool.acquireRetryDelay}"
+        p:idleConnectionTestPeriod="${database.pool.idleConnectionTestPeriod}"
+        p:preferredTestQuery="${database.pool.connectionHealthQuery}" />
+
 </beans>
