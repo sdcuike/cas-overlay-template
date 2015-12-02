@@ -85,7 +85,7 @@
     <!-- </bean> -->
 
     <import resource="classpath:/casServerConfig/db-config.xml" />
-
+ 
     <bean id="primaryAuthenticationHandler"
         class="org.jasig.cas.adaptors.jdbc.QueryDatabaseAuthenticationHandler"
         p:dataSource-ref="dataSourceForLocal" p:sql="select passwd from cas where name = ?  and active=1" />
